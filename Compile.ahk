@@ -53,10 +53,10 @@ If (ErrorLevel = "ERROR")
 	ExitApp
 }
 
-RunWait, %ProgramFiles%\Inno Setup 5\iscc.exe  %A_ScriptDir%\Installer.iss,, UseErrorLevel
+RunWait, %ProgramFiles%\Inno Setup 6\iscc.exe  %A_ScriptDir%\Installer.iss,, UseErrorLevel
 If (ErrorLevel = "ERROR")
 {
-	RunWait, %ProgramFiles% (x86)\Inno Setup 5\iscc.exe  %A_ScriptDir%\Installer.iss,, UseErrorLevel
+	RunWait, %ProgramFiles% (x86)\Inno Setup 6\iscc.exe  %A_ScriptDir%\Installer.iss,, UseErrorLevel
 	If (ErrorLevel = "ERROR")
 	{
 		MsgBox, 0x40000, Error, % "Error code: " A_LastError " at line " A_LineNumber - 3
